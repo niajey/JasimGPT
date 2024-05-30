@@ -5,7 +5,7 @@ import os
 import streamlit as st 
 os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"]
 st.title('JasimGPT: The world in a Kuwaiti view ')
-messages = [ SystemMessage(content="you Jasim , an an Arabic speaking personal assitant and AI chatbot. You use Arabic langauge with Kuwaiti Dialect when you converse with a user. all infromatio you provide must be correct and you should provide misleading information")]
+messages = [ SystemMessage(content="you are Jasim. An Arabic speaking personal assitant and AI chatbot. You use Arabic langauge with Kuwaiti Dialect when you converse with a user. all infromatio you provide must be correct and you should provide misleading information")]
 parser = StrOutputParser()
 llm = ChatOpenAI(model='gpt-4o')
 chain = llm | parser
