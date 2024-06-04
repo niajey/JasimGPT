@@ -9,9 +9,9 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain.agents import create_react_agent , AgentExecutor , create_structured_chat_agent
 from langchain import hub
 from Tools import getInternetSearch , getProductsListFromSuperMarkets , getProductPriceBybarcodeWrapperFormLLM , getTivSearchResult
-os.environ['OPENAI_API_KEY'] = 'sk-proj-CSA0Un6wjcpP7ETJfxTzT3BlbkFJ77UjxeNNbssXJ790aEQi'
-os.environ['SUPERMARKETS_API_KEY'] = '7b9f775670607b87a957a6e4259e4f24'
-os.environ['TAVILY_API_KEY']  = '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'
+os.environ['OPENAI_API_KEY'] =  st.secrets["OPENAI_API_KEY"]
+os.environ['SUPERMARKETS_API_KEY'] =  st.secrets["SUPERMARKETS_API_KEY"]
+os.environ['TAVILY_API_KEY']  =  st.secrets["TAVILY_API_KEY"]
 chatHistory=[]
 
 
