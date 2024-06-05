@@ -65,8 +65,8 @@ def getProductsListFromSuperMarketsBasedOnWord( productName) :
                     pprice = pdata['price']
                     pdescrition = pdata['product_description']
                     barcode = pdata['barcode_number']
-                    msg="""product name is  : {item_name} , and it's price is : {price}"""
-                    result = result + msg.format( item_name=pdescrition, price=pprice ) + '\n'
+                    msg="""product name is  : {item_name} , and it's price is : {price} with barcode number {barcode_num}"""
+                    result = result + msg.format( item_name=pdescrition, price=pprice , barcode_num =  barcode) + '\n'
 
     except :
         result = ''
